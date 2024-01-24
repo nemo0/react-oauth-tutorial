@@ -8,8 +8,7 @@ export default function Login() {
 
   const handleClick = () => {
     const callbackUrl = `${window.location.origin}`;
-    const googleClientId =
-      "930296528024-j74cd524el1nrr5bcu68htlmbv49n0oi.apps.googleusercontent.com";
+    const googleClientId = "YOUR_CLIENT_ID_FROM_GOOGLE";
     const targetUrl = `https://accounts.google.com/o/oauth2/auth?redirect_uri=${encodeURIComponent(
       callbackUrl
     )}&response_type=token&client_id=${googleClientId}&scope=openid%20email%20profile`;
