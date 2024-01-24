@@ -20,7 +20,6 @@ export default function Login() {
 
     if (isMatch) {
       const accessToken = isMatch[1];
-      localStorage.removeItem("access_token");
       localStorage.setItem("access_token", accessToken);
       setIsLoggedin(true);
     }
