@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { checkForCallback } from "simple-oauth-redirect/web";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -16,7 +15,6 @@ export default function Login() {
   };
 
   useEffect(() => {
-    checkForCallback();
     const accessTokenRegex = /access_token=([^&]+)/;
     const isMatch = window.location.href.match(accessTokenRegex);
 
