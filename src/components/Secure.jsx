@@ -1,27 +1,22 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSession, useUser } from "@descope/react-sdk";
 
 export default function Secure() {
   const navigate = useNavigate();
   const [userDetails, setUserDetails] = useState({});
+  const { isAuthenticated } = useSession();
+  const { user } = useUser();
 
-  const getUserDetails = async (accessToken) => {
-    const response = await fetch(
-      `https://www.googleapis.com/oauth2/v1/userinfo?alt=json&access_token=${accessToken}`
-    );
-    const data = await response.json();
-    setUserDetails(data);
-  };
+  if (!isAuthenticated) {
+    navigate("/");
+  }
 
   useEffect(() => {
-    const accessToken = localStorage.getItem("access_token");
-
-    if (!accessToken) {
-      navigate("/");
+    if (user) {
+      setUserDetails(user);
     }
-
-    getUserDetails(accessToken);
-  }, [navigate]);
+  }, [navigate, user]);
 
   return (
     <>
@@ -36,7 +31,6 @@ export default function Secure() {
             <p>Welcome</p>
             <h1 className="name">{userDetails.name}</h1>
             <p className="email">{userDetails.email}</p>
-            <p className="locale">{`Locale: ${userDetails.locale}`}</p>
           </div>
         </div>
       ) : (
