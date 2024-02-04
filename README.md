@@ -1,6 +1,6 @@
 ## React OAuth Tutorial
 
-![Google OAuth Authentication](https://imgur.com/O2PFUkQ.gif)
+![Google OAuth Authentication](https://imgur.com/fc27xEU.gif)
 
 This project is a simple React application that demonstrates OAuth authentication. It uses Vite as a build tool and React Router for routing. The application has two main components: `Login` and `Secure`. The `Login` component is responsible for the authentication process, while the `Secure` component displays user details fetched from Google's OAuth API.
 
