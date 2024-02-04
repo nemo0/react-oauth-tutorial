@@ -65,7 +65,7 @@ export default function Login() {
                 fill="#ea4335"
               />
             </svg>
-            Login with Google
+            Log in with Google
           </button>
         </div>
       </div>
