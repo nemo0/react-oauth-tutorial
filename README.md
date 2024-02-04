@@ -1,6 +1,6 @@
 ## React OAuth Tutorial with Descope
 
-![OAuth Authentication](https://imgur.com/zWHdvZb.gif)
+![OAuth Authentication](https://imgur.com/EpaQIst.gif)
 This project is a simple React application that demonstrates OAuth authentication using Descope. It uses Vite as a build tool and React Router for routing. The application has two main components: `Login` and `Secure`. The `Login` component is responsible for the authentication process using Descope, while the `Secure` component displays user details fetched from Descope's OAuth API.
 
 ### Cloning the Project
