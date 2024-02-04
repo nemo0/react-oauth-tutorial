@@ -7,7 +7,7 @@ export default function Login() {
   return (
     <div className="root">
       <div>
-        <h1>Login With Descope</h1>
+        <h1>Log in with Descope</h1>
         <div className="btn-container">
           <Descope
             flowId="sign-up-or-in"
