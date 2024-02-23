@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
 
 export default function Secure() {
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ export default function Secure() {
   };
 
   useEffect(() => {
-    const accessToken = localStorage.getItem("access_token");
+    const accessToken = Cookies.get("access_token");
 
     if (!accessToken) {
       navigate("/");
